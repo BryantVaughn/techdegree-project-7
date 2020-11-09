@@ -98,5 +98,10 @@ const weeklyWebTrafficData = {
 
 const webTrafficChart = new Chart(webTraffic, {
 	type: 'line',
-	data: hourlyWebTrafficData
+	data: hourlyWebTrafficData,
+	options: {
+		legend: {
+			display: false
+		}
+	}
 });

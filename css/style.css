@@ -10,3 +10,23 @@
 canvas {
 	max-width: 100%;
 }
+
+/* -------------------- */
+/* Layout               */
+/* -------------------- */
+
+.container {
+	display: grid;
+}
+
+.main-header {
+	grid-area: header;
+}
+
+.main-content {
+	grid-area: main;
+}
+
+.main-nav {
+	grid-area: nav;
+}

@@ -12,24 +12,55 @@
 		<title>DataView | Dashboard</title>
 	</head>
 	<body>
-		<header class="main-header">
-			<h1 class="title">Data<span>View</span></h1>
-			<img
-				class="notification-icon"
-				src="icons/icon-bell.svg"
-				alt="Notification Icon"
-			/>
-			<img class="user-icon" src="images/me.jpg" alt="Icon of Bryant Vaughn" />
-			<h4 class="user-name">Bryant Vaughn</h4>
-		</header>
+		<div class="container">
+			<header class="main-header" id="header">
+				<h1 class="title">Data<span>View</span></h1>
+				<img
+					class="notification-icon"
+					src="icons/icon-bell.svg"
+					alt="Notification Icon"
+				/>
+				<img
+					class="user-icon"
+					src="images/me.jpg"
+					alt="Icon of Bryant Vaughn"
+				/>
+				<h4 class="user-name">Bryant Vaughn</h4>
+			</header>
 
-		<main class="main-content">
-			<div class="charts">
-				<canvas id="webTraffic" width="400" height="400"></canvas>
-				<canvas id="dailyTraffic" width="400" height="400"></canvas>
-				<canvas id="mobileUsers" width="400" height="400"></canvas>
-			</div>
-		</main>
+			<nav class="main-nav">
+				<ul>
+					<li>
+						<a href="#header">
+							<img src="icons/icon-dashboard.svg" alt="Dashboard Icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#members">
+							<img src="icons/icon-members.svg" alt="Members Icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#social-data">
+							<img src="icons/icon-visits.svg" alt="Socail Visits Icon" />
+						</a>
+					</li>
+					<li>
+						<a href="#settings">
+							<img src="icons/icon-settings.svg" alt="Settings Icon" />
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<main class="main-content">
+				<div class="charts">
+					<canvas id="webTraffic" width="400" height="400"></canvas>
+					<canvas id="dailyTraffic" width="400" height="400"></canvas>
+					<canvas id="mobileUsers" width="400" height="400"></canvas>
+				</div>
+			</main>
+		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 		<script src="js/app.js"></script>
