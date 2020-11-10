@@ -40,6 +40,14 @@
 							d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
 				c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"
 						/>
+						<circle
+							class="new-alert"
+							cx="22"
+							cy="6"
+							r="5"
+							stroke="green"
+							fill="#45c932"
+						/>
 					</svg>
 					<div class="notification-dropdown"></div>
 				</div>
@@ -67,11 +75,30 @@
 			</nav>
 
 			<main class="main-content">
-				<div class="charts">
-					<canvas id="webTraffic" width="400" height="400"></canvas>
-					<canvas id="dailyTraffic" width="400" height="400"></canvas>
-					<canvas id="mobileUsers" width="400" height="400"></canvas>
+				<div class="search-container">
+					<h2 class="dashboard-title">Dashboard</h2>
+					<input class="search" type="text" placeholder="Search" />
 				</div>
+				<div class="charts">
+					<canvas
+						class="webTraffic"
+						id="webTraffic"
+						width="400"
+						height="400"
+					></canvas>
+				</div>
+				<canvas
+					class="dailyTraffic"
+					id="dailyTraffic"
+					width="400"
+					height="400"
+				></canvas>
+				<canvas
+					class="mobileUsers"
+					id="mobileUsers"
+					width="400"
+					height="400"
+				></canvas>
 			</main>
 		</div>
 
@@ -80,6 +107,6 @@
 			integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
 			crossorigin="anonymous"
 		></script>
-		<script src="js/app.js"></script>
+		<script src="js/charts.js"></script>
 	</body>
 </html>

@@ -29,12 +29,21 @@ canvas {
 
 .main-header {
 	grid-area: header;
-	display: flex;
 	width: 100%;
-	justify-content: space-between;
-	align-items: center;
 	padding: 0 0.5rem;
 	background-color: #6d69c3;
+}
+
+.main-header,
+.main-nav,
+.search-container {
+	display: flex;
+}
+
+.main-header,
+.search-container {
+	justify-content: space-between;
+	align-items: center;
 }
 
 .title {
@@ -79,10 +88,6 @@ canvas {
 	margin-left: 10px;
 }
 
-.main-content {
-	grid-area: main;
-}
-
 .main-nav {
 	grid-area: nav;
 	background-color: #323471;
@@ -95,4 +100,25 @@ canvas {
 	width: 1.5rem;
 	height: 1.5rem;
 	opacity: 0.6;
+}
+
+.main-content {
+	grid-area: main;
+	width: 95%;
+	margin: auto;
+}
+
+.search-container {
+	flex-direction: column;
+	margin-bottom: 1rem;
+}
+
+.dashboard-title {
+	font-size: 0.9rem;
+}
+
+.search {
+	font-size: 0.8rem;
+	height: 1.25rem;
+	width: 50%;
 }

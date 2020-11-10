@@ -1,9 +1,9 @@
 // Gather charts
 const webTraffic = document.getElementById('webTraffic');
-const dailyTraffic = document.getElementById('dailyTraffic');
-const mobileUsers = document.getElementById('mobileUsers');
 
 // Variables
+const label = 'Traffic';
+const fill = true;
 const lineTensionValue = 0;
 const chartColor = 'rgba(109,105,195,0.3)';
 const borderColor = 'rgba(109,105,195,0.9)';
@@ -29,7 +29,7 @@ const hourlyWebTrafficData = {
 	],
 	datasets: [
 		{
-			label: '',
+			label: 'Traffic',
 			data: [2, 1, 3, 8, 25, 35, 41, 47, 43, 36, 23, 10],
 			fill: true,
 			lineTension: lineTensionValue,
@@ -58,7 +58,7 @@ const dailyWebTrafficData = {
 	],
 	datasets: [
 		{
-			label: '',
+			label: 'Daily Traffic',
 			data: [250, 275, 300, 225, 300, 325, 275, 250, 300, 350, 400],
 			fill: true,
 			lineTension: lineTensionValue,
@@ -85,7 +85,7 @@ const weeklyWebTrafficData = {
 	],
 	datasets: [
 		{
-			label: '',
+			label: 'Mobile Users',
 			data: [500, 1000, 750, 1250, 1700, 1250, 1500, 1000, 1500, 2000, 2200],
 			fill: true,
 			lineTension: lineTensionValue,
@@ -98,10 +98,5 @@ const weeklyWebTrafficData = {
 
 const webTrafficChart = new Chart(webTraffic, {
 	type: 'line',
-	data: hourlyWebTrafficData,
-	options: {
-		legend: {
-			display: false
-		}
-	}
+	data: hourlyWebTrafficData
 });
