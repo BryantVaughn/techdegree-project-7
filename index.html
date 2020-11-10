@@ -7,6 +7,12 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"
+			integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w=="
+			crossorigin="anonymous"
+		/>
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>DataView | Dashboard</title>
@@ -15,17 +21,19 @@
 		<div class="container">
 			<header class="main-header" id="header">
 				<h1 class="title">Data<span>View</span></h1>
-				<img
-					class="notification-icon"
-					src="icons/icon-bell.svg"
-					alt="Notification Icon"
-				/>
-				<img
-					class="user-icon"
-					src="images/me.jpg"
-					alt="Icon of Bryant Vaughn"
-				/>
-				<h4 class="user-name">Bryant Vaughn</h4>
+				<div class="right-header">
+					<img
+						class="notification-icon"
+						src="icons/icon-bell.svg"
+						alt="Notification Icon"
+					/>
+					<img
+						class="user-icon"
+						src="images/me.jpg"
+						alt="Icon of Bryant Vaughn"
+					/>
+					<h4 class="user-name">Bryant Vaughn</h4>
+				</div>
 			</header>
 
 			<nav class="main-nav">
@@ -62,7 +70,11 @@
 			</main>
 		</div>
 
-		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+			integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+			crossorigin="anonymous"
+		></script>
 		<script src="js/app.js"></script>
 	</body>
 </html>

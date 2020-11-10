@@ -12,18 +12,65 @@ canvas {
 }
 
 /* -------------------- */
-/* Layout               */
+/* Classes              */
 /* -------------------- */
 
 .container {
 	display: grid;
 	grid-template-areas:
-		'header header header'
-		'nav main main';
+		'header'
+		'nav'
+		'main';
 }
+
+/* Header */
 
 .main-header {
 	grid-area: header;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 1rem;
+	background-color: #6d69c3;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 1.5em;
+}
+.title span,
+.user-name {
+	font-weight: 300;
+}
+
+.title,
+.user-name {
+	color: #fff;
+}
+
+.right-header {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 50%;
+}
+
+.notification-icon {
+	width: 1.25rem;
+	height: 1.25rem;
+	stroke-width: 1px;
+}
+
+.user-icon {
+	width: 1.75rem;
+	height: 1.75rem;
+	border-radius: 50%;
+}
+
+.user-name {
+	display: inline-block;
+	font-size: 0.8rem;
 }
 
 .main-content {
@@ -32,4 +79,16 @@ canvas {
 
 .main-nav {
 	grid-area: nav;
+	background-color: #323471;
+	text-align: center;
+}
+.main-nav ul {
+	padding-left: 0;
+	margin: auto;
+	list-style: none;
+}
+.main-nav img {
+	width: 2rem;
+	height: 2rem;
+	margin: 1rem auto;
 }

@@ -5,8 +5,8 @@ const mobileUsers = document.getElementById('mobileUsers');
 
 // Variables
 const lineTensionValue = 0;
-const chartColor = 'rgba(236,140,62,0.3)';
-const borderColor = 'rgba(236,140,62,0.7)';
+const chartColor = 'rgba(109,105,195,0.3)';
+const borderColor = 'rgba(109,105,195,0.9)';
 const borderWidth = 2;
 const pointRadius = 4;
 const pointBackgroundColor = 'rgb(255,255,255)';
