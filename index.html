@@ -75,11 +75,13 @@
 			</nav>
 
 			<main class="main-content">
-				<div class="search-container">
+				<div class="content-header">
 					<h2 class="dashboard-title">Dashboard</h2>
-					<input class="search" type="text" placeholder="Search" />
+					<div class="search-container">
+						<input class="search" type="text" placeholder="Search" />
+					</div>
 				</div>
-				<div class="charts">
+				<div class="web-chart">
 					<canvas
 						class="webTraffic"
 						id="webTraffic"
@@ -87,18 +89,22 @@
 						height="400"
 					></canvas>
 				</div>
-				<canvas
-					class="dailyTraffic"
-					id="dailyTraffic"
-					width="400"
-					height="400"
-				></canvas>
-				<canvas
-					class="mobileUsers"
-					id="mobileUsers"
-					width="400"
-					height="400"
-				></canvas>
+				<div class="daily-chart">
+					<canvas
+						class="dailyTraffic"
+						id="dailyTraffic"
+						width="400"
+						height="400"
+					></canvas>
+				</div>
+				<div class="mobile-chart">
+					<canvas
+						class="mobileUsers"
+						id="mobileUsers"
+						width="400"
+						height="400"
+					></canvas>
+				</div>
 			</main>
 		</div>
 
