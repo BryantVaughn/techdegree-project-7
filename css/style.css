@@ -42,7 +42,8 @@ canvas {
 .web-chart,
 .daily-chart,
 .mobile-chart,
-.social {
+.socials,
+.social-container {
 	display: flex;
 }
 
@@ -151,7 +152,7 @@ canvas {
 .web-chart,
 .daily-chart,
 .mobile-chart,
-.social {
+.socials {
 	flex-direction: column;
 }
 
@@ -167,5 +168,22 @@ canvas {
 .section-title {
 	font-size: 0.75rem;
 	text-transform: uppercase;
-	align-self: flex-start;
+}
+
+.social-container {
+	width: 100%;
+	align-items: center;
+	background-color: #eef2f3;
+	margin: 0.5rem 0;
+	padding-left: 1rem;
+	border: 1px solid rgba(63, 72, 84, 0.4);
+}
+
+.social {
+	height: 64px;
+	width: 64px;
+}
+
+.social-text {
+	margin-left: 1rem;
 }
