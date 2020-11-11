@@ -30,7 +30,33 @@ function buildLineChart(duration) {
 // Build Bar Chart
 const dailyTrafficChart = new Chart(dailyTraffic, {
 	type: 'bar',
-	data: {}
+	data: {
+		labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+		datasets: [
+			{
+				label: 'Daily Traffic',
+				data: [50, 80, 150, 120, 175, 160, 70],
+				fill,
+				backgroundColor,
+				borderColor,
+				borderWidth
+			}
+		]
+	},
+	options: {
+		legend: {
+			display: false
+		},
+		scales: {
+			yAxes: [
+				{
+					ticks: {
+						beginAtZero: true
+					}
+				}
+			]
+		}
+	}
 });
 
 function buildLineChartData(duration) {
@@ -39,7 +65,7 @@ function buildLineChartData(duration) {
 
 	// Temp obj used for dataset
 	const config = {
-		label: 'Traffic',
+		label,
 		fill,
 		lineTension,
 		backgroundColor,
@@ -176,4 +202,8 @@ durationBtnsDiv.addEventListener('click', (evt) => {
 		const buttons = durationBtnsDiv.children;
 		handleDurationButtonUpdate(buttons, target);
 	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	buildLineChart('hourly');
 });

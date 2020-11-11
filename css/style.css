@@ -37,7 +37,10 @@ canvas {
 }
 
 .main-header,
-.main-nav {
+.main-nav,
+.web-chart,
+.daily-chart,
+.mobile-chart {
 	display: flex;
 }
 
@@ -140,4 +143,22 @@ canvas {
 .duration-btns .active-btn {
 	background-color: #6d69c3;
 	color: white;
+}
+
+.web-chart,
+.daily-chart,
+.mobile-chart {
+	flex-direction: column;
+}
+
+.web-chart,
+.daily-chart,
+.mobile-chart {
+	width: 100%;
+}
+
+.chart-title {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	align-self: flex-start;
 }
