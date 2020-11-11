@@ -3,6 +3,9 @@ const webTraffic = document.getElementById('webTraffic');
 const dailyTraffic = document.getElementById('dailyTraffic');
 const mobileUsers = document.getElementById('mobileUsers');
 
+// Gather duration buttons div
+const durationBtnsDiv = document.querySelector('.duration-btns');
+
 // Variables
 const label = 'Traffic';
 const fill = true;
@@ -12,15 +15,17 @@ const borderColor = 'rgba(109,105,195,0.9)';
 const borderWidth = 2;
 
 // Build Line Chart
-const webTrafficChart = new Chart(webTraffic, {
-	type: 'line',
-	data: buildLineChartData('hourly'),
-	options: {
-		legend: {
-			display: false
+function buildLineChart(duration) {
+	const webTrafficChart = new Chart(webTraffic, {
+		type: 'line',
+		data: buildLineChartData(duration),
+		options: {
+			legend: {
+				display: false
+			}
 		}
-	}
-});
+	});
+}
 
 // Build Bar Chart
 const dailyTrafficChart = new Chart(dailyTraffic, {
@@ -153,3 +158,22 @@ function buildLineChartData(duration) {
 	// Return data obj
 	return data;
 }
+
+function handleDurationButtonUpdate(buttons, target) {
+	for (let button of buttons) {
+		button.classList.remove('active-btn');
+		button.disabled = false;
+	}
+	target.classList.add('active-btn');
+	target.disabled = true;
+	buildLineChart(target.textContent.toLowerCase());
+}
+
+// Event Listeners
+durationBtnsDiv.addEventListener('click', (evt) => {
+	const { target } = evt;
+	if (target.tagName === 'BUTTON') {
+		const buttons = durationBtnsDiv.children;
+		handleDurationButtonUpdate(buttons, target);
+	}
+});
