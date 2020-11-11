@@ -38,6 +38,7 @@ canvas {
 
 .main-header,
 .main-nav,
+.charts,
 .web-chart,
 .daily-chart,
 .mobile-chart {
@@ -145,6 +146,7 @@ canvas {
 	color: white;
 }
 
+.charts,
 .web-chart,
 .daily-chart,
 .mobile-chart {
@@ -155,6 +157,9 @@ canvas {
 .daily-chart,
 .mobile-chart {
 	width: 100%;
+	align-items: center;
+	border-bottom: 1px solid rgba(63, 72, 84, 0.4);
+	padding-bottom: 1.5rem;
 }
 
 .chart-title {

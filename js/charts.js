@@ -10,8 +10,8 @@ const durationBtnsDiv = document.querySelector('.duration-btns');
 const label = 'Traffic';
 const fill = true;
 const lineTension = 0;
-const backgroundColor = 'rgba(109,105,195,0.3)';
-const borderColor = 'rgba(109,105,195,0.9)';
+const lightPurple = 'rgba(109,105,195,0.3)';
+const darkPurple = 'rgba(109,105,195,0.9)';
 const borderWidth = 2;
 
 // Build Line Chart
@@ -37,9 +37,7 @@ const dailyTrafficChart = new Chart(dailyTraffic, {
 				label: 'Daily Traffic',
 				data: [50, 80, 150, 120, 175, 160, 70],
 				fill,
-				backgroundColor,
-				borderColor,
-				borderWidth
+				backgroundColor: darkPurple
 			}
 		]
 	},
@@ -59,6 +57,31 @@ const dailyTrafficChart = new Chart(dailyTraffic, {
 	}
 });
 
+// Build Doughnut Chart
+const mobileUsersChart = new Chart(mobileUsers, {
+	type: 'doughnut',
+	data: {
+		labels: ['Phones', 'Tablets', 'Desktop'],
+		datasets: [
+			{
+				label: 'Mobile Users',
+				data: [21, 21, 98],
+				backgroundColor: ['#1e9eab', '#45c932', darkPurple]
+			}
+		]
+	},
+	options: {
+		legend: {
+			position: 'right',
+			align: 'center',
+			labels: {
+				boxWidth: 15,
+				padding: 15
+			}
+		}
+	}
+});
+
 function buildLineChartData(duration) {
 	const data = {};
 	data.datasets = [];
@@ -68,8 +91,8 @@ function buildLineChartData(duration) {
 		label,
 		fill,
 		lineTension,
-		backgroundColor,
-		borderColor,
+		backgroundColor: lightPurple,
+		borderColor: darkPurple,
 		borderWidth
 	};
 
