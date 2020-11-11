@@ -41,7 +41,8 @@ canvas {
 .charts,
 .web-chart,
 .daily-chart,
-.mobile-chart {
+.mobile-chart,
+.social {
 	display: flex;
 }
 
@@ -149,7 +150,8 @@ canvas {
 .charts,
 .web-chart,
 .daily-chart,
-.mobile-chart {
+.mobile-chart,
+.social {
 	flex-direction: column;
 }
 
@@ -162,7 +164,7 @@ canvas {
 	padding-bottom: 1.5rem;
 }
 
-.chart-title {
+.section-title {
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	align-self: flex-start;
