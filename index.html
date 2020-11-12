@@ -14,6 +14,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/toggle-switch.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>DataView | Dashboard</title>
 	</head>
@@ -255,6 +256,62 @@
 						</div>
 					</section>
 				</div>
+				<section class="message">
+					<h4 class="section-title">Message User</h4>
+					<form class="form-container">
+						<input
+							type="text"
+							placeholder="Search for User"
+							class="form-field"
+							id="userField"
+						/>
+						<textarea
+							placeholder="Message for User"
+							id="messageField"
+							class="form-area"
+						></textarea>
+						<button class="btn-primary" id="send">Send</button>
+					</form>
+				</section>
+				<section class="settings">
+					<h4 class="section-title">Settings</h4>
+
+					<!-- Custom toggle switch code from CSS Toggle Switch -->
+					<label class="switch-light switch-candy" onclick="">
+						<input type="checkbox" />
+
+						<strong>Send Email Notifications</strong>
+
+						<span>
+							<span>Off</span>
+							<span>On</span>
+							<a></a>
+						</span>
+					</label>
+					<label class="switch-light switch-candy" onclick="">
+						<input type="checkbox" />
+
+						<strong>Set Profile to Public</strong>
+
+						<span>
+							<span>Off</span>
+							<span>On</span>
+							<a></a>
+						</span>
+					</label>
+
+					<select class="setting-select" id="timezone">
+						<option disabled selected>Select Timezone</option>
+						<option>Eastern</option>
+						<option>Central</option>
+						<option>Mountain</option>
+						<option>Pacific</option>
+					</select>
+					<div class="settings-btns">
+						<button class="btn-primary" id="save">Save</button>
+						<button class="btn-disabled" id="cancel">Cancel</button>
+					</div>
+				</section>
 			</main>
 		</div>
 
