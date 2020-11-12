@@ -94,6 +94,8 @@ canvas {
 	margin-left: 10px;
 }
 
+/* Nav */
+
 .main-nav {
 	grid-area: nav;
 	background-color: #323471;
@@ -107,6 +109,8 @@ canvas {
 	height: 1.5rem;
 	opacity: 0.6;
 }
+
+/* Main Body */
 
 .main-content {
 	grid-area: main;
