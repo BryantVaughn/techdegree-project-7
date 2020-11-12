@@ -17,12 +17,12 @@ canvas {
 
 .container {
 	display: grid;
+	grid-template-rows: 55px 55px 1fr;
+	grid-template-columns: 100%;
 	grid-template-areas:
 		'header'
 		'nav'
 		'main';
-	grid-template-rows: 50px 50px 1fr;
-	grid-template-columns: 1fr;
 }
 
 /* Header */
@@ -37,7 +37,8 @@ canvas {
 
 .main-header,
 .duration-btns .active-btn,
-.social-image {
+.social-image,
+.btn-primary {
 	background-color: #6d69c3;
 }
 
@@ -54,7 +55,8 @@ canvas {
 .new-members,
 .activity,
 .members-container,
-.activity-container {
+.activity-container,
+.switch-container {
 	display: flex;
 }
 
@@ -120,7 +122,6 @@ canvas {
 
 .main-content {
 	grid-area: main;
-	width: 95%;
 	margin: auto;
 	text-align: center;
 }
@@ -158,8 +159,9 @@ canvas {
 	margin-left: 0.5rem;
 }
 
-.duration-btns .active-btn {
-	color: white;
+.duration-btns .active-btn,
+.btn-primary {
+	color: #fff;
 }
 
 .charts,
@@ -192,11 +194,16 @@ canvas {
 .mobile-chart,
 .socials,
 .new-members,
-.activity {
+.activity,
+.message {
 	border-bottom: 1px solid rgba(63, 72, 84, 0.4);
 	padding-bottom: 1.5rem;
 }
 
+.socials {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
 .socials,
 .members {
 	flex-wrap: wrap;
@@ -269,7 +276,7 @@ canvas {
 .activity-container {
 	justify-content: left;
 	align-items: center;
-	padding: 0 0.3rem;
+	padding: 0 0.5rem;
 }
 
 .profile-image {
@@ -305,4 +312,51 @@ canvas {
 
 .members-container p:last-child {
 	margin-left: auto;
+}
+
+.message .section-title {
+	margin-bottom: 2rem;
+}
+
+.form-field,
+.form-area {
+	margin-bottom: 0.75rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+	font-size: 0.6rem;
+}
+
+.form-field,
+.form-area,
+.message button {
+	width: 95%;
+}
+
+.form-area {
+	height: 5rem;
+	resize: none;
+}
+
+.btn-primary {
+	border: none;
+	text-transform: uppercase;
+	height: 2rem;
+	border-radius: 5px;
+	font-size: 0.6rem;
+}
+
+.settings {
+	padding-bottom: 2rem;
+}
+
+.settings p {
+	margin: 0;
+}
+.settings label {
+	width: 4rem;
+}
+.settings p,
+.settings label {
+	display: inline-block;
+	font-size: 0.6rem;
 }
