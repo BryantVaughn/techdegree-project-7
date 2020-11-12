@@ -48,7 +48,8 @@ canvas {
 .daily-chart,
 .mobile-chart,
 .socials,
-.social-container {
+.social-container,
+.social-text {
 	display: flex;
 }
 
@@ -155,7 +156,7 @@ canvas {
 .web-chart,
 .daily-chart,
 .mobile-chart,
-.socials {
+.social-text {
 	flex-direction: column;
 }
 
@@ -167,8 +168,11 @@ canvas {
 }
 
 .section-title {
-	font-size: 0.75rem;
 	text-transform: uppercase;
+}
+.section-title,
+.social-text p:first-child {
+	font-size: 0.75rem;
 }
 
 .web-chart,
@@ -179,13 +183,21 @@ canvas {
 	padding-bottom: 1.5rem;
 }
 
+.socials {
+	flex-wrap: wrap;
+}
+.socials .section-title {
+	flex-basis: 100%;
+}
+
 .social-container {
-	width: 100%;
+	flex: 1 1 250px;
 	align-items: center;
-	background-color: #eef2f3;
-	margin: 0.5rem 0;
-	padding-left: 1rem;
+	background-color: #f2f5f6;
+	margin-top: 1rem;
+	padding: 1rem 1.5rem;
 	border: 1px solid rgba(63, 72, 84, 0.4);
+	border-radius: 5px;
 }
 
 .social-image {
@@ -193,6 +205,7 @@ canvas {
 	height: 3.25rem;
 	padding: 0.75rem;
 	border-radius: 50%;
+	margin-right: 0.5rem;
 }
 
 .social {
@@ -202,4 +215,17 @@ canvas {
 
 .social-text {
 	margin-left: 1rem;
+	align-items: flex-start;
+}
+.social-text p {
+	margin: 0;
+}
+
+.social-text p:first-child {
+	color: #6d69c3;
+	font-weight: 600;
+}
+
+.social-text p:nth-child(2) {
+	font-size: 1.5rem;
 }
