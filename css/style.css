@@ -53,7 +53,8 @@ canvas {
 .members,
 .new-members,
 .activity,
-.members-container {
+.members-container,
+.activity-container {
 	display: flex;
 }
 
@@ -189,7 +190,9 @@ canvas {
 .web-chart,
 .daily-chart,
 .mobile-chart,
-.socials {
+.socials,
+.new-members,
+.activity {
 	border-bottom: 1px solid rgba(63, 72, 84, 0.4);
 	padding-bottom: 1.5rem;
 }
@@ -252,7 +255,8 @@ canvas {
 	font-size: 1.5rem;
 }
 
-.new-members .section-title {
+.new-members .section-title,
+.activity .section-title {
 	align-self: center;
 }
 
@@ -261,7 +265,8 @@ canvas {
 	flex: 1 1 300px;
 }
 
-.members-container {
+.members-container,
+.activity-container {
 	justify-content: left;
 	align-items: center;
 	padding: 0 0.3rem;
@@ -271,13 +276,21 @@ canvas {
 	margin-right: 0.4rem;
 }
 
-.members-text {
+.members-text,
+.activity-text {
 	text-align: left;
 }
 .members-text p {
-	font-size: 0.6rem;
 	margin-top: 0;
 	margin-bottom: -0.3rem;
+}
+.members-text p,
+.activity-text p:first-child {
+	font-size: 0.6rem;
+}
+
+.activity-text p {
+	margin: 0;
 }
 
 .members-text a {
@@ -285,7 +298,8 @@ canvas {
 }
 
 .members-text a,
-.members-container p:last-child {
+.members-container p:last-child,
+.activity-text p:last-child {
 	font-size: 0.5rem;
 }
 
