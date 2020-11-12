@@ -33,6 +33,11 @@ canvas {
 	align-items: center;
 	width: 100%;
 	padding: 0 0.5rem;
+}
+
+.main-header,
+.duration-btns .active-btn,
+.social-image {
 	background-color: #6d69c3;
 }
 
@@ -63,10 +68,9 @@ canvas {
 	margin: 0;
 }
 
-.icon-bell {
+.bell-icon {
 	width: 2rem;
 	height: 2rem;
-	stroke-width: 1px;
 	z-index: 5;
 	margin-top: 3px;
 	padding: 0.4rem;
@@ -144,7 +148,6 @@ canvas {
 }
 
 .duration-btns .active-btn {
-	background-color: #6d69c3;
 	color: white;
 }
 
@@ -161,13 +164,19 @@ canvas {
 .mobile-chart {
 	width: 100%;
 	align-items: center;
-	border-bottom: 1px solid rgba(63, 72, 84, 0.4);
-	padding-bottom: 1.5rem;
 }
 
 .section-title {
 	font-size: 0.75rem;
 	text-transform: uppercase;
+}
+
+.web-chart,
+.daily-chart,
+.mobile-chart,
+.socials {
+	border-bottom: 1px solid rgba(63, 72, 84, 0.4);
+	padding-bottom: 1.5rem;
 }
 
 .social-container {
@@ -179,9 +188,16 @@ canvas {
 	border: 1px solid rgba(63, 72, 84, 0.4);
 }
 
+.social-image {
+	width: 3.25rem;
+	height: 3.25rem;
+	padding: 0.75rem;
+	border-radius: 50%;
+}
+
 .social {
-	height: 64px;
-	width: 64px;
+	width: 100%;
+	height: auto;
 }
 
 .social-text {
