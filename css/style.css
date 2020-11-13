@@ -56,7 +56,8 @@ canvas {
 .activity,
 .members-container,
 .activity-container,
-.switch-container {
+.switch-container,
+.settings-btns {
 	display: flex;
 }
 
@@ -160,7 +161,8 @@ canvas {
 }
 
 .duration-btns .active-btn,
-.btn-primary {
+.btn-primary,
+.btn-disabled {
 	color: #fff;
 }
 
@@ -314,12 +316,14 @@ canvas {
 	margin-left: auto;
 }
 
-.message .section-title {
+.message .section-title,
+.settings .section-title {
 	margin-bottom: 2rem;
 }
 
 .form-field,
-.form-area {
+.form-area,
+.setting-select {
 	margin-bottom: 0.75rem;
 	padding: 0.5rem;
 	border-radius: 5px;
@@ -328,8 +332,16 @@ canvas {
 
 .form-field,
 .form-area,
-.message button {
-	width: 95%;
+.message button,
+.setting-select,
+.settings-btns {
+	width: 100%;
+}
+
+.message,
+.settings {
+	padding-left: 2.5%;
+	padding-right: 2.5%;
 }
 
 .form-area {
@@ -337,12 +349,17 @@ canvas {
 	resize: none;
 }
 
-.btn-primary {
+.btn-primary,
+.btn-disabled {
 	border: none;
 	text-transform: uppercase;
 	height: 2rem;
 	border-radius: 5px;
 	font-size: 0.6rem;
+}
+
+.btn-disabled {
+	background-color: #aab6bb;
 }
 
 .settings {
@@ -359,4 +376,19 @@ canvas {
 .settings label {
 	display: inline-block;
 	font-size: 0.6rem;
+}
+
+.switch-container {
+	width: 70%;
+	align-items: center;
+	padding-bottom: 1.25rem;
+}
+
+.switch-container,
+.settings-btns {
+	justify-content: space-between;
+}
+
+.settings-btns button {
+	width: 48%;
 }
