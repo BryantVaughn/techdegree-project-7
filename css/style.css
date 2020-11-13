@@ -44,6 +44,7 @@ canvas {
 
 .main-header,
 .main-nav,
+.charts,
 .web-chart,
 .daily-chart,
 .mobile-chart,
@@ -182,6 +183,14 @@ canvas {
 .mobile-chart {
 	margin: auto;
 }
+.web-chart {
+	flex: 1 100%;
+}
+
+.daily-chart,
+.mobile-chart {
+	flex: 1 1 350px;
+}
 
 .chart-container-full,
 .chart-container-half {
@@ -216,6 +225,8 @@ canvas {
 	padding-left: 2.5%;
 	padding-right: 2.5%;
 }
+
+.charts,
 .socials,
 .members {
 	flex-wrap: wrap;
@@ -449,6 +460,10 @@ canvas {
 		text-align: right;
 		background-color: #f1f4f5;
 		border-bottom: 1px solid rgba(63, 72, 84, 0.4);
+	}
+
+	.search-container,
+	.mobile-chart {
 		border-left: 1px solid rgba(63, 72, 84, 0.4);
 	}
 
@@ -456,6 +471,6 @@ canvas {
 		width: calc(100vw - 60px);
 	}
 	.chart-container-half {
-		width: calc((100vw - 60px) / 2);
+		width: calc(50vw - 55px);
 	}
 }
