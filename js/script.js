@@ -1,5 +1,7 @@
 // Gather elements
 const alertContainer = document.querySelector('.alert-container');
+const msgForm = document.querySelector('.msg-form');
+const msgFormSubmit = document.querySelector('#send');
 
 // Functions
 function generateAlert(parentElement, alertMsg) {
@@ -34,6 +36,26 @@ function addButtonToElement(parentElement, buttonContent) {
 	return button;
 }
 
+function submitFormData() {
+	let userInput = msgForm.querySelector('input');
+	let user = userInput.value;
+
+	let msgInput = msgForm.querySelector('textarea');
+	let msg = msgInput.value;
+
+	if (user === '' && msg === '') {
+		alert('Error: User and Message Required');
+	} else if (user === '') {
+		alert('Error: User is required');
+	} else if (msg === '') {
+		alert('Error: Message is required');
+	} else {
+		alert(`Success: Your message has been sent to ${user}`);
+		userInput.value = '';
+		msgInput.value = '';
+	}
+}
+
 // Build alerts
 const alertMessages = [
 	'Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm.',
@@ -43,3 +65,23 @@ const alertMessages = [
 for (let message of alertMessages) {
 	generateAlert(alertContainer, message);
 }
+
+// Event Listeners
+alertContainer.addEventListener('click', (evt) => {
+	const { target } = evt;
+
+	if (target.tagName === 'BUTTON') {
+		const alertDiv = target.parentNode;
+		const alertContainer = alertDiv.parentNode;
+
+		setTimeout(() => {
+			alertContainer.removeChild(alertDiv);
+		}, 1000);
+		alertDiv.style.opacity = 0;
+	}
+});
+
+msgFormSubmit.addEventListener('click', (evt) => {
+	evt.preventDefault();
+	submitFormData();
+});

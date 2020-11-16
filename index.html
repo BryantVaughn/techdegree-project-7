@@ -20,7 +20,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="main-header" id="header">
+			<header class="main-header">
 				<h1 class="title">Data<span>View</span></h1>
 				<div class="notifications">
 					<div class="bell-icon">
@@ -59,13 +59,13 @@
 			</header>
 
 			<nav class="main-nav">
-				<a href="#header" class="active-nav">
+				<a href="#dashboard" class="active-nav">
 					<img src="icons/icon-dashboard.svg" alt="Dashboard Icon" />
 				</a>
 				<a href="#members">
 					<img src="icons/icon-members.svg" alt="Members Icon" />
 				</a>
-				<a href="#social-data">
+				<a href="#visits">
 					<img src="icons/icon-visits.svg" alt="Socail Visits Icon" />
 				</a>
 				<a href="#settings">
@@ -73,7 +73,7 @@
 				</a>
 			</nav>
 
-			<main class="main-content">
+			<main class="main-content" id="dashboard">
 				<div class="content-header">
 					<h2 class="dashboard-title">Dashboard</h2>
 					<div class="search-container">
@@ -109,7 +109,7 @@
 						</div>
 					</section>
 				</div>
-				<section class="socials" id="social-data">
+				<section class="socials" id="visits">
 					<h4 class="section-title">Social Stats</h4>
 					<div class="social-container">
 						<div class="social-image">
@@ -269,7 +269,7 @@
 				<div class="message-settings">
 					<section class="message">
 						<h4 class="section-title">Message User</h4>
-						<form class="form-container">
+						<form class="msg-form">
 							<input
 								type="text"
 								placeholder="Search for User"
@@ -315,10 +315,12 @@
 
 						<select class="setting-select" id="timezone">
 							<option disabled selected>Select Timezone</option>
-							<option>Eastern</option>
-							<option>Central</option>
-							<option>Mountain</option>
-							<option>Pacific</option>
+							<optgroup label="US Timezones">
+								<option>Eastern</option>
+								<option>Central</option>
+								<option>Mountain</option>
+								<option>Pacific</option>
+							</optgroup>
 						</select>
 						<div class="settings-btns">
 							<button class="btn-primary" id="save">Save</button>
