@@ -36,6 +36,7 @@ canvas {
 }
 
 .main-header,
+.alert,
 .duration-btns .active-btn,
 .social-image,
 .btn-primary {
@@ -146,6 +147,19 @@ canvas {
 	border-radius: 5px;
 }
 
+.alert-container {
+	width: 100%;
+	padding: 0 0.5rem;
+}
+
+.alert {
+	font-size: 0.6rem;
+	border-radius: 5px;
+}
+.alert span {
+	font-weight: bold;
+}
+
 .duration-btns {
 	width: 100%;
 	margin-bottom: 1rem;
@@ -163,6 +177,7 @@ canvas {
 	margin-left: 0.5rem;
 }
 
+.alert,
 .duration-btns .active-btn,
 .btn-primary,
 .btn-disabled {
@@ -243,7 +258,7 @@ canvas {
 }
 
 .social-container {
-	flex: 1 1 250px;
+	flex: 1 1 225px;
 	align-items: center;
 	background-color: #f2f5f6;
 	padding: 1rem 1.5rem;
