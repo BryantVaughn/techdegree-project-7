@@ -122,7 +122,11 @@ button {
 .main-nav img {
 	width: 1.5rem;
 	height: 1.5rem;
-	opacity: 0.6;
+	opacity: 0.5;
+}
+
+.active-nav img {
+	opacity: 1;
 }
 
 /* Main Body */
@@ -489,7 +493,7 @@ button {
 			'nav main';
 
 		grid-template-columns: 55px 1fr;
-		grid-template-rows: 60px 1fr;
+		grid-template-rows: 55px 1fr;
 	}
 
 	.main-header {
@@ -596,4 +600,7 @@ button {
 	.message {
 		border-bottom: none;
 	}
+}
+
+@media (min-width: 1024px) {
 }
