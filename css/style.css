@@ -11,6 +11,10 @@ canvas {
 	max-width: 100%;
 }
 
+button {
+	cursor: pointer;
+}
+
 /* -------------------- */
 /* Classes              */
 /* -------------------- */
@@ -252,6 +256,9 @@ canvas {
 	padding-bottom: 1.5rem;
 }
 
+.web-chart,
+.daily-chart,
+.mobile-chart,
 .socials,
 .new-members,
 .activity,
@@ -275,6 +282,7 @@ canvas {
 .socials {
 	display: inline-flex;
 	gap: 1rem;
+	width: 100%;
 }
 
 .social-container {
@@ -497,6 +505,11 @@ canvas {
 		border-bottom: 1px solid rgba(63, 72, 84, 0.4);
 	}
 
+	.search-container,
+	.mobile-chart {
+		border-left: 1px solid rgba(63, 72, 84, 0.4);
+	}
+
 	.alert {
 		flex-direction: row;
 		justify-content: flex-start;
@@ -507,15 +520,14 @@ canvas {
 		padding-bottom: 0.375rem;
 	}
 
-	.search-container,
-	.mobile-chart {
-		border-left: 1px solid rgba(63, 72, 84, 0.4);
+	.section-title {
+		text-align: left;
 	}
 
 	.chart-container-full {
-		width: calc(100vw - 60px);
+		width: calc((100vw - 60px) * 0.95);
 	}
 	.chart-container-half {
-		width: calc(50vw - 55px);
+		width: calc((50vw - 55px) * 0.95);
 	}
 }
