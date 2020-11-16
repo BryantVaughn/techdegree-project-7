@@ -36,6 +36,20 @@ function addButtonToElement(parentElement, buttonContent) {
 	return button;
 }
 
+function removeAlert(evt) {
+	const { target } = evt;
+
+	if (target.tagName === 'BUTTON') {
+		const alertDiv = target.parentNode;
+		const alertContainer = alertDiv.parentNode;
+
+		setTimeout(() => {
+			alertContainer.removeChild(alertDiv);
+		}, 1000);
+		alertDiv.style.opacity = 0;
+	}
+}
+
 function submitFormData() {
 	let userInput = msgForm.querySelector('input');
 	let user = userInput.value;
@@ -68,17 +82,7 @@ for (let message of alertMessages) {
 
 // Event Listeners
 alertContainer.addEventListener('click', (evt) => {
-	const { target } = evt;
-
-	if (target.tagName === 'BUTTON') {
-		const alertDiv = target.parentNode;
-		const alertContainer = alertDiv.parentNode;
-
-		setTimeout(() => {
-			alertContainer.removeChild(alertDiv);
-		}, 1000);
-		alertDiv.style.opacity = 0;
-	}
+	removeAlert(evt);
 });
 
 msgFormSubmit.addEventListener('click', (evt) => {
