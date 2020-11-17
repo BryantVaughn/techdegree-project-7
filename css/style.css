@@ -352,7 +352,8 @@ button {
 }
 
 .social-text p:first-child,
-.members-text a {
+.members-text a,
+.activity-container button {
 	color: #6d69c3;
 }
 
@@ -409,8 +410,16 @@ button {
 	font-size: 0.5rem;
 }
 
-.members-container p:last-child {
+.members-container p:last-child,
+.activity-container button {
 	margin-left: auto;
+}
+
+.activity-container button {
+	outline: none;
+	border: none;
+	background-color: inherit;
+	font-size: 1.5rem;
 }
 
 .message .section-title,
